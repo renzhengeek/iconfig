@@ -1,0 +1,31 @@
+[user]
+	name = Eric Ren
+	email = *
+[sendemail]
+   suppresscc = all
+   confirm = always
+   bcc = Eric Ren <*>
+
+   annotate = always
+   smtpserver = /usr/local/bin/msmtp
+   from = Eric Ren <*>
+[commit]
+	template = ~/.gitmessage.txt
+[color]
+	ui = true
+[push]
+	default = simple
+[diff "default"]
+   xfuncname = "^[[:alpha:]$_].*[^:]$"
+[core]
+	editor = vim
+[format]
+        signoff = true
+        thread = shallow
+[diff]
+	submodule = log
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
